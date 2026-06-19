@@ -1,12 +1,12 @@
 # Basic Router and Switch Network
 
-## Overview
+## 📌Overview
 
 This lab demonstrates how to build a basic routed network using one router, one switch, and two PCs in Cisco Packet Tracer Physical Mode.
 
 The network was configured with IPv4 and IPv6 addressing, basic device security, switch management access, and end-to-end connectivity verification.
 
-## Objectives
+## 🎯Objectives
 
 * Build the physical topology using a router, switch, and two PCs
 * Configure static IPv4 and IPv6 addressing
@@ -19,7 +19,7 @@ The network was configured with IPv4 and IPv6 addressing, basic device security,
 
 ![Topology](./topology.png)
 
-## Addressing Table
+## 📋Addressing Table
 
 | Device | Interface | IPv4 Address   | IPv6 Address                   | Default Gateway       |
 | ------ | --------- | -------------- | ------------------------------ | --------------------- |
@@ -29,7 +29,7 @@ The network was configured with IPv4 and IPv6 addressing, basic device security,
 | PC-A   | NIC       | 192.168.1.3/24 | 2001:db8:acad:1::3/64          | 192.168.1.1 / fe80::1 |
 | PC-B   | NIC       | 192.168.0.3/24 | 2001:db8:acad::3/64            | 192.168.0.1 / fe80::1 |
 
-## Configuration Summary
+## ⚙️Configuration Summary
 
 ### Router R1
 
@@ -77,7 +77,7 @@ Default gateway: 192.168.1.1
 
 ![Configuration Host PC-B](./screenshots/PC-B.png)
 
-## Verification
+## ✅Verification
 
 ### Router Routing Table
 
@@ -130,7 +130,7 @@ End-to-end connectivity was verified using ping tests.
 
 All ping packets were successful.
 
-## Troubleshooting Notes
+## 🛠️Troubleshooting Notes
 
 ### Initial PC-A to PC-B ping failed
 
@@ -140,7 +140,7 @@ The initial ping from PC-A to PC-B failed because the router interfaces were not
 
 If R1 G0/0/1 were configured with `192.168.1.2`, it would conflict with the S1 VLAN 1 management address. This would create an IP address conflict and could break management connectivity and routing behavior in the 192.168.1.0/24 network.
 
-## Lessons Learned
+## 🧠Lessons Learned
 
 This lab helped reinforce the basic workflow for building and verifying a small routed network:
 
@@ -150,7 +150,7 @@ This lab helped reinforce the basic workflow for building and verifying a small 
 * IPv6 routing must be enabled with `ipv6 unicast-routing`.
 * `show` commands are essential for verifying interface status, routing, and connectivity.
 
-## Files
+## 📁Files
 
 | File | Description |
 |---|---|

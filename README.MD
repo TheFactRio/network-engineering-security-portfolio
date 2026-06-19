@@ -1,22 +1,22 @@
 # CCNA Networking & Security Portfolio
 
-## About
+## 👨‍💻About
 Кто ты, что это за портфолио, зачем оно. Tools Used 1 предложение
 
-## Current Status
+## 💻Current Status
 Например: In progress, currently documenting foundation labs.
 
-## Lab Categories
+## 📁Lab Categories
 Короткое описание 6 разделов.
 
-## Skills Demonstrated
+## 🛠️Skills Demonstrated
 Обновлять по мере добавления лаб.
 
-## Progress
+## 📚Progress
 Таблица: planned / in progress / completed.
 
-## Future Plans
+## 🎯Future Plans
 More labs, Ukrainian version, capstone project.
 
-## Contact
+## 📫Contact
 LinkedIn / GitHub.
