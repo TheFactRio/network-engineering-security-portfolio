@@ -4,7 +4,7 @@
 
 I'm **Mykhailo**, a cybersecurity student from Ukraine.
 
-This portfolio documents my hands-on networking practice while studying CCNA concepts, with a focus on routing, switching, network security, troubleshooting, and basic system administration.
+This portfolio documents my hands-on networking practice while studying CCNA concepts, with a focus on routing, switching, network security and troubleshooting.
 
 The labs are built in **Cisco Packet Tracer**.
 
