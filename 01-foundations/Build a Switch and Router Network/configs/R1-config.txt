@@ -1,0 +1,32 @@
+hostname R1
+!
+enable secret class
+service password-encryption
+!
+banner motd 'Unauthorized access to this device is prohibited!'
+!
+ipv6 unicast-routing
+!
+interface GigabitEthernet0/0/0
+description Connected to Host PC-B
+ip address 192.168.0.1 255.255.255.0
+ipv6 address 2001:DB8:ACAD::1/64
+ipv6 address FE80::1 link-local
+no shutdown
+!
+interface GigabitEthernet0/0/1
+description Connected to F0/5 on S1
+ip address 192.168.1.1 255.255.255.0
+ipv6 address 2001:DB8:ACAD:1::1/64
+ipv6 address FE80::1 link-local
+no shutdown
+!
+line console 0
+password cisco
+login
+!
+line vty 0 15
+password cisco
+login
+!
+end
