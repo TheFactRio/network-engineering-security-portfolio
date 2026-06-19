@@ -1,22 +1,82 @@
 # CCNA Networking & Security Portfolio
 
-## 👨‍💻About
-Кто ты, что это за портфолио, зачем оно. Tools Used 1 предложение
+## 👨‍💻 About
 
-## 💻Current Status
-Например: In progress, currently documenting foundation labs.
+I'm **Mykhailo**, a cybersecurity student from Ukraine.
 
-## 📁Lab Categories
-Короткое описание 6 разделов.
+This portfolio documents my hands-on networking practice while studying CCNA concepts, with a focus on routing, switching, network security, troubleshooting, and basic system administration.
 
-## 🛠️Skills Demonstrated
-Обновлять по мере добавления лаб.
+The labs are built in **Cisco Packet Tracer**.
 
-## 📚Progress
-Таблица: planned / in progress / completed.
+## 💻 Current Status
 
-## 🎯Future Plans
-More labs, Ukrainian version, capstone project.
+This portfolio is currently in progress.
 
-## 📫Contact
-LinkedIn / GitHub.
+The first set of foundation labs has been completed and documented. I am now continuing with switching, routing, network security, and troubleshooting labs.
+
+## 📁 Lab Categories
+
+| Category                   | Description                                                                                 |
+| -------------------------- | ------------------------------------------------------------------------------------------- |
+| `01-foundations`           | Basic networking labs, IPv4/IPv6 addressing, TCP/UDP communication, and small network setup |
+| `02-switching-routing`     | VLANs, trunking, inter-VLAN routing, EtherChannel, HSRP, OSPF, and static routing           |
+| `03-network-security`      | SSH, secure device configuration, port security, ACLs, NAT, and wireless security           |
+| `04-operations-monitoring` | NTP, configuration backups, device management, and operational tasks                        |
+| `05-troubleshooting`       | Connectivity troubleshooting, network documentation, and issue resolution                   |
+| `06-network-projects`     | Larger practical projects that combine multiple networking and security skills              |
+
+## 🛠️ Skills Demonstrated
+
+This section will be updated as more labs are completed.
+
+Current skills demonstrated:
+
+* Basic Cisco IOS configuration
+* Router and switch setup
+* IPv4 addressing and subnetting
+* IPv6 addressing and verification
+* VLSM network design
+* TCP and UDP traffic analysis
+* Interface configuration and verification
+* Basic device security
+* Network connectivity testing
+* Use of IOS verification commands
+* Technical documentation with Markdown
+
+This section will continue to grow as more labs are added.
+
+## 📚 Progress
+
+### Completed Foundation Labs
+
+| Lab                                                                                | Category    | Status    |
+| ---------------------------------------------------------------------------------- | ----------- | --------- |
+| [Build a Switch and Router Network](./01-foundations/basic-router-switch-network/) | Foundations | Completed |
+| [VLSM Design and Implementation](./01-foundations/vlsm-design-implementation/)     | Foundations | Completed |
+| [IPv6 Addressing](./01-foundations/ipv6-addressing/)                               | Foundations | Completed |
+| [TCP and UDP Communications](./01-foundations/tcp-udp-communications/)             | Foundations | Completed |
+
+### Overall Portfolio Progress
+
+| Category                   | Status                 |
+| -------------------------- | ---------------------- |
+| `01-foundations`           | Initial labs completed |
+| `02-switching-routing`     | Planned                |
+| `03-network-security`      | Planned                |
+| `04-operations-monitoring` | Planned                |
+| `05-troubleshooting`       | Planned                |
+| `06-network-project`       | Planned                |
+
+
+## 🎯 Future Plans
+
+* Add switching and routing labs
+* Add network security labs
+* Add troubleshooting-focused labs
+* Document configuration backups and operational tasks
+* Build a network project
+
+## 📫 Contact
+
+* LinkedIn: [Mykhailo Zizevskyi](https://www.linkedin.com/in/mykhailo-zizevskyi-a011b7412)
+* GitHub: [TheFactRio](https://github.com/TheFactRio)
