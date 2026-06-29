@@ -1,169 +1,186 @@
-# IPv6 Addressing
+# VLSM Design and Implementation
 
 ## 📌Overview
 
-This lab demonstrates manual IPv6 address configuration on Cisco network devices in Packet Tracer Physical Mode. The topology includes one router, one switch, and two end devices located in separate IPv6 networks.
+This lab demonstrates how to design and implement an IPv4 addressing scheme using Variable Length Subnet Masking, VLSM, in Cisco Packet Tracer Physical Mode.
 
-The lab covers basic router and switch setup, manual IPv6 addressing, IPv6 link-local addressing, enabling IPv6 routing, and end-to-end connectivity verification using ping and tracert.
+The starting network was 192.168.33.128/25. The network was divided into multiple subnets of different sizes based on the number of required hosts. After the VLSM plan was completed, the router interfaces were configured with the calculated IPv4 addresses and connectivity was verified across the point-to-point router link.
 
 ## 🎯Objectives
 
-* Build and cable the network according to the topology.
-* Configure basic settings on the router and switch.
-* Manually assign IPv6 global unicast addresses.
-* Configure IPv6 link-local addresses.
-* Enable IPv6 unicast routing on the router.
-* Configure IPv6 addressing on end devices.
-* Verify end-to-end IPv6 connectivity.
-* Use show commands to verify interface and IPv6 configuration.
+* Examine the network requirements
+* Design a VLSM addressing scheme
+* Allocate subnets based on host requirements
+* Document the final addressing plan and device configurations
+* Configure basic router security settings
+* Configure IPv4 addresses on router interfaces
+* Save the running configuration
+* Verify connectivity between BR1 and BR2
 
 ## Topology
 
 ![Topology](./topology.png)
 
-## 📋Addressing Table
+## 📋VLSM Addressing Plan
 
-| Device | Interface |         IPv6 Address | Prefix Length | Default Gateway |
-| ------ | --------- | -------------------: | ------------: | --------------- |
-| R1     | G0/0/0    | `2001:db8:acad:a::1` |            64 | N/A             |
-| R1     | G0/0/1    | `2001:db8:acad:1::1` |            64 | N/A             |
-| S1     | VLAN 1    | `2001:db8:acad:1::b` |            64 | `fe80::1`       |
-| PC-A   | NIC       | `2001:db8:acad:1::3` |            64 | `fe80::1`       |
-| PC-B   | NIC       | `2001:db8:acad:a::3` |            64 | `fe80::1`       |
+Starting network:
+
+```text
+192.168.33.128/25
+```
+
+Available usable host addresses in `/25`:
+
+```text
+126 hosts
+```
+
+Host requirements:
+
+| Subnet         | Hosts Needed |
+| -------------- | -----------: |
+| BR1 LAN        |           40 |
+| BR2 LAN        |           25 |
+| BR2 IoT LAN    |            5 |
+| BR2 CCTV LAN   |            4 |
+| BR2 HVAC C2LAN |            4 |
+| BR1-BR2 Link   |            2 |
+
+The subnets were allocated from largest to smallest to avoid wasting IPv4 addresses.
+
+| Subnet Description | Hosts Needed | Network Address / CIDR | First Usable Host | Broadcast Address |
+| ------------------ | -----------: | ---------------------- | ----------------- | ----------------- |
+| BR1 LAN            |           40 | `192.168.33.128/26`    | `192.168.33.129`  | `192.168.33.191`  |
+| BR2 LAN            |           25 | `192.168.33.192/27`    | `192.168.33.193`  | `192.168.33.223`  |
+| BR2 IoT LAN        |            5 | `192.168.33.224/29`    | `192.168.33.225`  | `192.168.33.231`  |
+| BR2 CCTV LAN       |            4 | `192.168.33.232/29`    | `192.168.33.233`  | `192.168.33.239`  |
+| BR2 HVAC C2LAN     |            4 | `192.168.33.240/29`    | `192.168.33.241`  | `192.168.33.247`  |
+| BR1-BR2 Link       |            2 | `192.168.33.248/30`    | `192.168.33.249`  | `192.168.33.251`  |
+
+## 📋Device Addressing Table
+
+| Device | Interface | IP Address       | Subnet Mask       | Network / Purpose |
+| ------ | --------- | ---------------- | ----------------- | ----------------- |
+| BR1    | G0/0/0    | `192.168.33.249` | `255.255.255.252` | BR1-BR2 Link      |
+| BR1    | G0/0/1    | `192.168.33.129` | `255.255.255.192` | BR1 LAN           |
+| BR2    | G0/0/0    | `192.168.33.250` | `255.255.255.252` | BR1-BR2 Link      |
+| BR2    | G0/0/1    | `192.168.33.193` | `255.255.255.224` | BR2 LAN           |
 
 ## ⚙️Configuration Summary
 
-### Router R1
+### Router BR1
 
 The router was configured with:
 
-* hostname `R1`
-* IPv6 global unicast address on `G0/0/0`
-* IPv6 global unicast address on `G0/0/1`
-* manually configured IPv6 link-local address `fe80::1` on both router interfaces
-* IPv6 unicast routing enabled
-* active router interfaces with `no shutdown`
-* IPv6 connectivity between two different networks
+* hostname `BR1`
+* encrypted privileged EXEC password
+* console password
+* VTY password
+* password encryption
+* MOTD banner
+* IPv4 addressing on `G0/0/0` and `G0/0/1`
+* interface descriptions
+* active interfaces using `no shutdown`
+* saved startup configuration
 
-R1 connects two IPv6 networks:
+BR1 connects the BR1 LAN and the point-to-point link to BR2:
 
-| Interface | Connected To | IPv6 Network           |
-| --------- | ------------ | ---------------------- |
-| G0/0/0    | PC-B         | `2001:db8:acad:a::/64` |
-| G0/0/1    | S1 / PC-A    | `2001:db8:acad:1::/64` |
+| Interface | Connected To | Network             |
+| --------- | ------------ | ------------------- |
+| G0/0/0    | BR2          | `192.168.33.248/30` |
+| G0/0/1    | S1 / BR1 LAN | `192.168.33.128/26` |
 
-The same link-local address `fe80::1` was used on both R1 interfaces because each router interface belongs to a different local network segment.
+### Router BR2
 
-### Switch S1
+The router was configured with:
 
-The switch was configured with:
+* hostname `BR2`
+* encrypted privileged EXEC password
+* console password
+* VTY password
+* password encryption
+* MOTD banner
+* IPv4 addressing on `G0/0/0` and `G0/0/1`
+* interface descriptions
+* active interfaces using `no shutdown`
+* saved startup configuration
 
-* hostname `S1`
-* IPv6 management address on VLAN 1
-* manually configured link-local address on VLAN 1
-* active SVI interface with `no shutdown`
-* management access through VLAN 1
+BR2 connects the point-to-point link to BR1 and the BR2 LAN:
 
-S1 uses VLAN 1 for management access:
+| Interface | Connected To | Network             |
+| --------- | ------------ | ------------------- |
+| G0/0/0    | BR1          | `192.168.33.248/30` |
+| G0/0/1    | S2 / BR2 LAN | `192.168.33.192/27` |
 
-```text
-S1 VLAN 1: 2001:db8:acad:1::b/64
-S1 VLAN 1 link-local: fe80::b
-Default gateway: fe80::1
-```
+### Future BR2 LANs
 
-The link-local address on S1 was corrected from `fe80::1` to `fe80::b` to avoid using the same link-local address as R1 in the same local segment.
+The following subnets were planned and reserved, but no router interfaces were configured for them in this lab:
 
-### Host PC-A
-
-![Configuration Host PC-A](./screenshots/PC-A.png)
-
-### Host PC-B
-
-![Configuration Host PC-B](./screenshots/PC-B.png)
+| Future LAN     | Network             | Usable Range                      |
+| -------------- | ------------------- | --------------------------------- |
+| BR2 IoT LAN    | `192.168.33.224/29` | `192.168.33.225 - 192.168.33.230` |
+| BR2 CCTV LAN   | `192.168.33.232/29` | `192.168.33.233 - 192.168.33.238` |
+| BR2 HVAC C2LAN | `192.168.33.240/29` | `192.168.33.241 - 192.168.33.246` |
 
 ## ✅Verification
 
-### Router IPv6 Interface Status
+### BR1 to BR2 Link Test
 
-The command `show ipv6 interface brief` confirmed that both router interfaces were up and had IPv6 addresses configured.
+BR1 successfully pinged the BR2 G0/0/0 interface:
 
-![Router IPv6 Interface Status](./screenshots/Ipv6_interface_brief.png)
+![BR1 to BR2 Link Test](./screenshots/BR1-to-BR2-Link-Test.png)
 
-### Router IPv6 Interface Details
+The first packet was lost because ARP resolution had to occur before successful ICMP replies were received.
 
-The command `show ipv6 interface g0/0/0` confirmed that the manually configured link-local address was applied.
+### BR2 to BR1 Link Test
 
-![Interface Brief](./screenshots/interface_g000.png)
+BR2 successfully pinged the BR1 G0/0/0 interface:
 
-### Switch VLAN 1 IPv6 Status
+![BR2 to BR1 Link Test](./screenshots/BR2-to-BR1-Link-Test.png)
 
-The command `show ipv6 interface vlan1` confirmed that the S1 management interface was active.
+### Expected Failed Ping to Remote LAN Interface
 
-![Interface Brief on switch](./screenshots/VLAN_1.png)
+BR2 attempted to ping the BR1 LAN interface:
 
-### PC-B SLAAC Verification
+![BR2 ping the BR1 LAN](./screenshots/BR2-ping-BR1-LAN.png)
 
-Before IPv6 routing was enabled on R1, PC-B had only a link-local IPv6 address.
-
-After enabling IPv6 unicast routing on R1, PC-B received:
-
-![PC-B ipconfig](./screenshots/PC-B_ipconfig.png)
-
-This happened because R1 started sending IPv6 Router Advertisement messages, allowing PC-B to automatically generate an IPv6 address using SLAAC.
-
-### Connectivity Test from PC-A
-
-PC-A successfully pinged the R1 link-local address and also successfully traced the route to PC-B:
-
-![PC-A tests](./screenshots/PC-A_tests.png)
-
-This confirms that traffic from PC-A to PC-B is routed through R1.
-
-### Connectivity Test from PC-B
-
-PC-B successfully pinged PC-A and also successfully pinged the R1 link-local address:
-
-![PC-B tests](./screenshots/PC-B_tests.png)
+This was expected in this lab because no static routes or dynamic routing protocol were configured. BR2 only knew about its directly connected networks.
 
 ## 🛠️Troubleshooting Notes
 
-### Incorrect S1 link-local address
+### VTY line range correction
 
-Initially, S1 VLAN 1 was configured with:
+Initially only one VTY line was configured.
 
-```text
-ipv6 address fe80::1 link-local
-```
-
-This was incorrect because `fe80::1` was already used by R1 in the same local network segment.
-
-The correct S1 VLAN 1 link-local address is:
+The configuration was later corrected to include all available VTY lines:
 
 ```text
-ipv6 address fe80::b link-local
+line vty 0 15
+ password cisco
+ login
 ```
 
-This keeps link-local addressing unique inside the local segment and matches the addressing table.
 
 ## 🧠Lessons Learned
 
-This lab helped reinforce the basic IPv6 configuration workflow on Cisco devices:
+This lab helped reinforce the practical process of VLSM design and implementation:
 
-* IPv6 global unicast addresses identify devices inside IPv6 networks.
-* IPv6 link-local addresses are used for local-link communication.
-* The same link-local address can be reused on different router interfaces if those interfaces are in different local networks.
-* Link-local addresses must be unique within the same local segment.
-* IPv6 routing must be enabled with `ipv6 unicast-routing`.
-* Router Advertisement messages allow hosts to receive IPv6 addressing information through SLAAC.
-* `ping`, `tracert`, `show ipv6 interface brief`, and `show ipv6 interface` are useful commands for verification and troubleshooting.
+* VLSM allows subnets of different sizes to be created from one larger network.
+* Subnets should be allocated from largest to smallest to reduce address waste.
+* The original `/25` network provided enough address space for all required subnets.
+* `/26` was used for the 40-host LAN.
+* `/27` was used for the 25-host LAN.
+* `/29` was used for small future LANs.
+* `/30` was used for the point-to-point router link.
+* Directly connected router interfaces can communicate without static or dynamic routing.
+* Communication to remote LAN interfaces requires routing information.
 
 ## 📁Files
 
 | File | Description |
 |---|---|
-| [topology.png](./topology.png) | Final network topology |
-| [ipv6-router-switch-connectivity.pkt](./packet-tracer/ipv6-router-and-switch-connectivity.pka) | Completed Packet Tracer lab file |
-| [R1-config.txt](./configs/R1-config.txt) | Final R1 configuration |
-| [S1-config.txt](./configs/S1-config.txt) | Final S1 configuration |
+| [topology.png](./topology.png) | Network topology |
+| [vlsm-design-and-implementation.pkt](./packet-tracer/vlsm-design-and-implementation.pka) | Completed Packet Tracer lab file |
+| [BR1-config.txt](./configs/BR1-config.txt) | Final BR1 configuration |
+| [BR2-config.txt](./configs/BR2-config.txt) | Final BR2 configuration |
 | [screenshots/](./screenshots/) | Verification screenshots |

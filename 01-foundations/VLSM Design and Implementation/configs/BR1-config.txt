@@ -1,0 +1,27 @@
+hostname BR1
+!
+enable secret class
+!
+service password-encryption
+!
+banner motd 'Unauthorized access to this device is prohibited!'
+!
+line console 0
+ password cisco
+ login
+!
+line vty 0 15
+ password cisco
+ login
+!
+interface GigabitEthernet0/0/0
+ description BR1-BR2 Link
+ ip address 192.168.33.249 255.255.255.252
+ no shutdown
+!
+interface GigabitEthernet0/0/1
+ description Connected to S1
+ ip address 192.168.33.129 255.255.255.192
+ no shutdown
+!
+end

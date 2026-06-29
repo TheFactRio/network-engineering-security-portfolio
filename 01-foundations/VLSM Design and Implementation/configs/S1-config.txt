@@ -1,9 +1,0 @@
-hostname S1
-!
-interface Vlan1
- description Management SVI
- ipv6 address 2001:DB8:ACAD:1::B/64
- ipv6 address FE80::B link-local
- no shutdown
-!
-end
