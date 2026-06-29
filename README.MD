@@ -1,4 +1,4 @@
-# CCNA Networking & Security Portfolio
+# Network Engineering & Security Portfolio
 
 ## 👨‍💻 About
 
@@ -23,7 +23,7 @@ The first set of foundation labs has been completed and documented. I am now con
 | `03-network-security`      | SSH, secure device configuration, port security, ACLs, NAT, and wireless security           |
 | `04-operations-monitoring` | NTP, configuration backups, device management, and operational tasks                        |
 | `05-troubleshooting`       | Connectivity troubleshooting, network documentation, and issue resolution                   |
-| `06-network-projects`     | Larger practical projects that combine multiple networking and security skills              |
+| `06-network-projects`     | Large practical project that combine multiple networking and security skills              |
 
 ## 🛠️ Skills Demonstrated
 
@@ -60,7 +60,7 @@ This section will continue to grow as more labs are added.
 
 | Category                   | Status                 |
 | -------------------------- | ---------------------- |
-| `01-foundations`           | Initial labs completed |
+| `01-foundations`           | Completed |
 | `02-switching-routing`     | Planned                |
 | `03-network-security`      | Planned                |
 | `04-operations-monitoring` | Planned                |
