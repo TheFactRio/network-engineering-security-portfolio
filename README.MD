@@ -52,9 +52,9 @@ This section will continue to grow as more labs are added.
 | Lab                                                                                | Category    | Status    |
 | ---------------------------------------------------------------------------------- | ----------- | --------- |
 | [Basic Switch and Router Network](./01-foundations/Basic%20Router%20and%20Switch%20Network/) | Foundations | Completed |
-| [VLSM Design and Implementation](./01-foundations/vlsm-design-implementation/)     | Foundations | Completed |
+| [VLSM Design and Implementation](./01-foundations/VLSM%20Design%20and%20Implementation/)     | Foundations | Completed |
 | [IPv6 Addressing](./01-foundations/IPv6%20Addressing/)                               | Foundations | Completed |
-| [TCP and UDP Communications](./01-foundations/tcp-udp-communications/)             | Foundations | Completed |
+| [TCP and UDP Communications](./01-foundations/TCP%20and%20UDP%20Communications/)             | Foundations | Completed |
 
 ### Overall Portfolio Progress
 
