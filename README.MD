@@ -23,7 +23,7 @@ The first set of foundation labs has been completed and documented. I am now con
 | `03-network-security`      | SSH, secure device configuration, port security, ACLs, NAT, and wireless security           |
 | `04-operations-monitoring` | NTP, configuration backups, device management, and operational tasks                        |
 | `05-troubleshooting`       | Connectivity troubleshooting, network documentation, and issue resolution                   |
-| `06-network-projects`     | Large practical project that combine multiple networking and security skills              |
+| `06-network-project`     | Large practical project that combine multiple networking and security skills              |
 
 ## 🛠️ Skills Demonstrated
 
