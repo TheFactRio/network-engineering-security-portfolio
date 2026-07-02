@@ -6,7 +6,7 @@ I'm **Mykhailo**, a cybersecurity student from Ukraine.
 
 This portfolio documents my hands-on networking practice while studying CCNA concepts, with a focus on routing, switching, network security and troubleshooting.
 
-The labs are built in **Cisco Packet Tracer**.
+The labs and the project are built in **Cisco Packet Tracer**.
 
 ## 💻 Current Status
 
@@ -72,8 +72,8 @@ This section will continue to grow as more labs are added.
 
 * Add switching and routing labs
 * Add network security labs
+* Add operations and monitoring labs
 * Add troubleshooting-focused labs
-* Document configuration backups and operational tasks
 * Build a network project
 
 ## 📫 Contact
