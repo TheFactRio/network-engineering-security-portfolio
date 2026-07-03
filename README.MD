@@ -31,17 +31,15 @@ This section will be updated as more labs are completed.
 
 Current skills demonstrated:
 
-* Basic Cisco IOS configuration
-* Router and switch setup
-* IPv4 addressing and subnetting
-* IPv6 addressing and verification
-* VLSM network design
+* Basic IOS device configuration
+* IPv4 addressing, subnetting, and VLSM planning
+* IPv6 addressing and connectivity verification
+* Interface configuration and status verification
+* Basic device access security
+* End-to-end connectivity testing with ping and tracert
+* IOS verification and troubleshooting commands
 * TCP and UDP traffic analysis
-* Interface configuration and verification
-* Basic device security
-* Network connectivity testing
-* Use of IOS verification commands
-* Technical documentation with Markdown
+* Technical documentation using Markdown
 
 This section will continue to grow as more labs are added.
 
@@ -54,7 +52,7 @@ This section will continue to grow as more labs are added.
 | [Basic Switch and Router Network](./01-foundations/Basic%20Router%20and%20Switch%20Network/) | Foundations | Completed |
 | [VLSM Design and Implementation](./01-foundations/VLSM%20Design%20and%20Implementation/)     | Foundations | Completed |
 | [IPv6 Addressing](./01-foundations/IPv6%20Addressing/)                               | Foundations | Completed |
-| [TCP and UDP Communications](./01-foundations/TCP%20and%20UDP%20Communications/)             | Foundations | Completed |
+| [TCP and UDP Communications Analysis](./01-foundations/TCP%20and%20UDP%20Communications%20Analysis/)             | Foundations | Completed |
 
 ### Overall Portfolio Progress
 
