@@ -65,7 +65,7 @@ Observed TCP details for the HTTP request:
 | Acknowledgment Number | `1`        |
 | TCP Flags             | `PSH, ACK` |
 
-![http-request-tcp-psh-ack](.screenshots/03-http-request-tcp-psh-ack.png)
+![http-request-tcp-psh-ack](./screenshots/03-http-request-tcp-psh-ack.png)
 
 The `PSH, ACK` flags show that the TCP connection is already established and the segment is carrying application data.
 
@@ -81,9 +81,9 @@ The FTP connection process shows the TCP three-way handshake:
 | 2    | MultiServer to FTP Client | `SYN, ACK` | Server accepts and acknowledges  |
 | 3    | FTP Client to MultiServer | `ACK`      | Client confirms the connection   |
 
-![ftp-client-syn](.screenshots/05-ftp-client-syn.png)
-![ftp-server-syn-ack](.screenshots/06-ftp-server-syn-ack.png)
-![ftp-client-ack](.screenshots/07-ftp-client-ack.png)
+![ftp-client-syn](./screenshots/05-ftp-client-syn.png)
+![ftp-server-syn-ack](./screenshots/06-ftp-server-syn-ack.png)
+![ftp-client-ack](./screenshots/07-ftp-client-ack.png)
 
 Observed FTP control connection:
 
@@ -94,7 +94,7 @@ Observed FTP control connection:
 | Server Port             | `21`   |
 | Transport Protocol      | TCP    |
 
-![ftp-response-psh-ack](.screenshots/08-ftp-response-psh-ack.png)
+![ftp-response-psh-ack](./screenshots/08-ftp-response-psh-ack.png)
 
 After the handshake, FTP application data is carried with `PSH, ACK`.
 
@@ -102,7 +102,7 @@ After the handshake, FTP application data is carried with `PSH, ACK`.
 
 DNS traffic uses UDP for standard name resolution queries.
 
-![dns-udp-osi-model](.screenshots/09-dns-udp-osi-model.png)
+![dns-udp-osi-model](./screenshots/09-dns-udp-osi-model.png)
 
 Observed DNS query:
 
@@ -112,7 +112,7 @@ Observed DNS query:
 | Destination Port   | `53`   |
 | Transport Protocol | UDP    |
 
-![dns-query-udp](.screenshots/10-dns-query-udp.png)
+![dns-query-udp](./screenshots/10-dns-query-udp.png)
 
 Observed DNS response:
 
@@ -122,7 +122,7 @@ Observed DNS response:
 | Destination Port   | `1026` |
 | Transport Protocol | UDP    |
 
-![dns-response-udp](.screenshots/11-dns-response-udp.png)
+![dns-response-udp](./screenshots/11-dns-response-udp.png)
 
 UDP does not use sequence numbers or acknowledgment numbers because it does not establish a reliable connection.
 
@@ -132,7 +132,7 @@ The DNS query resolved:
 multiserver.pt.ptu -> 192.168.1.254
 ```
 
-![dns-answer-ip](.screenshots/12-dns-answer-ip.png)
+![dns-answer-ip](./screenshots/12-dns-answer-ip.png)
 
 ### Email over TCP
 
@@ -150,7 +150,7 @@ Observed initial SMTP TCP connection:
 | Acknowledgment Number | `0`    |
 | TCP Flags             | `SYN`  |
 
-![email-smtp-syn](.screenshots/13-email-smtp-syn.png)
+![email-smtp-syn](./screenshots/13-email-smtp-syn.png)
 
 Observed server response:
 
@@ -162,7 +162,7 @@ Observed server response:
 | Acknowledgment Number | `1`        |
 | TCP Flags             | `SYN, ACK` |
 
-![email-smtp-syn-ack](.screenshots/14-email-smtp-syn-ack.png)
+![email-smtp-syn-ack](./screenshots/14-email-smtp-syn-ack.png)
 
 Observed SMTP application data segment:
 
@@ -174,7 +174,7 @@ Observed SMTP application data segment:
 | Acknowledgment Number | `1`        |
 | TCP Flags             | `PSH, ACK` |
 
-![email-smtp-psh-ack](.screenshots/15-email-smtp-psh-ack.png)
+![email-smtp-psh-ack](./screenshots/15-email-smtp-psh-ack.png)
 
 The source port can vary because it is dynamically selected by the client.
 
