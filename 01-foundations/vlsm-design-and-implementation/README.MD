@@ -128,7 +128,7 @@ The following subnets were planned and reserved, but no router interfaces were c
 
 BR1 successfully pinged the BR2 G0/0/0 interface:
 
-![BR1 to BR2 Link Test](./screenshots/BR1-to-BR2-Link-Test.png)
+![BR1 to BR2 Link Test](./screenshots/br1-to-br2-link-test.png)
 
 The first packet was lost because ARP resolution had to occur before successful ICMP replies were received.
 
@@ -136,13 +136,13 @@ The first packet was lost because ARP resolution had to occur before successful 
 
 BR2 successfully pinged the BR1 G0/0/0 interface:
 
-![BR2 to BR1 Link Test](./screenshots/BR2-to-BR1-Link-Test.png)
+![BR2 to BR1 Link Test](./screenshots/br2-to-br1-link-test.png)
 
 ### Expected Failed Ping to Remote LAN Interface
 
 BR2 attempted to ping the BR1 LAN interface:
 
-![BR2 ping the BR1 LAN](./screenshots/BR2-ping-BR1-LAN.png)
+![BR2 ping the BR1 LAN](./screenshots/br2-ping-br1-lan.png)
 
 This was expected in this lab because no static routes or dynamic routing protocol were configured. BR2 only knew about its directly connected networks.
 

@@ -71,11 +71,11 @@ Default gateway: 192.168.1.1
 
 ### Host PC-A
 
-![Configuration Host PC-A](./screenshots/PC-A.png)
+![Configuration Host PC-A](./screenshots/pc-a.png)
 
 ### Host PC-B
 
-![Configuration Host PC-B](./screenshots/PC-B.png)
+![Configuration Host PC-B](./screenshots/pc-b.png)
 
 ## ✅Verification
 
@@ -126,7 +126,7 @@ FastEthernet0/6   up   up
 
 End-to-end connectivity was verified using ping tests.
 
-![ping from S1 to PC-B](./screenshots/ping-from-S1-to-PC-B.png)
+![ping from S1 to PC-B](./screenshots/ping-from-s1-to-pc-b.png)
 
 All ping packets were successful.
 
@@ -155,7 +155,7 @@ This lab helped reinforce the basic workflow for building and verifying a small 
 | File | Description |
 |---|---|
 | [topology.png](./topology.png) | Final network topology |
-| [basic-router-switch-network.pkt](./packet-tracer/basic-router-and-switch-network.pka) | Completed Packet Tracer lab file |
+| [basic-router-switch-network.pka](./packet-tracer/basic-router-and-switch-network.pka) | Completed Packet Tracer lab file |
 | [R1-config.txt](./configs/r1-config.txt) | Final R1 configuration |
 | [S1-config.txt](./configs/s1-config.txt) | Final S1 configuration |
 | [screenshots/](./screenshots/) | Verification screenshots |
