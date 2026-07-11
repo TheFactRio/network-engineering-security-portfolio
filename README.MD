@@ -39,7 +39,7 @@ Current skills demonstrated:
 * End-to-end connectivity testing with ping and tracert
 * IOS verification and troubleshooting commands
 * TCP and UDP traffic analysis
-* Technical documentation using Markdown
+* Technical documentation
 
 This section will continue to grow as more labs are added.
 
