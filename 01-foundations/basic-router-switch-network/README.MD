@@ -75,7 +75,7 @@ Default gateway: 192.168.1.1
 
 ### Host PC-B
 
-![Configuration Host PC-B](./screenshots/pc-b.png)
+![Configuration Host PC-B](./screenshots/conf-pc-b.png)
 
 ## ✅Verification
 
@@ -126,7 +126,7 @@ FastEthernet0/6   up   up
 
 End-to-end connectivity was verified using ping tests.
 
-![ping from S1 to PC-B](./screenshots/ping-from-s1-to-pc-b.png)
+![ping from S1 to PC-B](./screenshots/ping-s1-to-pc-b.png)
 
 All ping packets were successful.
 

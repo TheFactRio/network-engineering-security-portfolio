@@ -76,11 +76,11 @@ The link-local address on S1 was corrected from `fe80::1` to `fe80::b` to avoid 
 
 ### Host PC-A
 
-![Configuration Host PC-A](./screenshots/pc-a.png)
+![Configuration Host PC-A](./screenshots/conf-pc-a.png)
 
 ### Host PC-B
 
-![Configuration Host PC-B](./screenshots/pc-b.png)
+![Configuration Host PC-B](./screenshots/conf-pc-b.png)
 
 ## ✅Verification
 
@@ -88,7 +88,7 @@ The link-local address on S1 was corrected from `fe80::1` to `fe80::b` to avoid 
 
 The command `show ipv6 interface brief` confirmed that both router interfaces were up and had IPv6 addresses configured.
 
-![Router IPv6 Interface Status](./screenshots/ipv6-interface-brief.png)
+![Router IPv6 Interface Status](./screenshots/sh-ipv6-interface-brief.png)
 
 ### Router IPv6 Interface Details
 
@@ -100,7 +100,7 @@ The command `show ipv6 interface g0/0/0` confirmed that the manually configured 
 
 The command `show ipv6 interface vlan1` confirmed that the S1 management interface was active.
 
-![Interface Brief on switch](./screenshots/vlan-1.png)
+![Interface Brief on switch](./screenshots/int-vlan-1.png)
 
 ### PC-B SLAAC Verification
 
@@ -116,7 +116,7 @@ This happened because R1 started sending IPv6 Router Advertisement messages, all
 
 PC-A successfully pinged the R1 link-local address and also successfully traced the route to PC-B:
 
-![PC-A tests](./screenshots/pc-a-tests.png)
+![PC-A tests](./screenshots/pc-a-test.png)
 
 This confirms that traffic from PC-A to PC-B is routed through R1.
 
@@ -124,7 +124,7 @@ This confirms that traffic from PC-A to PC-B is routed through R1.
 
 PC-B successfully pinged PC-A and also successfully pinged the R1 link-local address:
 
-![PC-B tests](./screenshots/pc-b-tests.png)
+![PC-B tests](./screenshots/pc-b-test.png)
 
 ## 🛠️Troubleshooting Notes
 
