@@ -222,5 +222,5 @@ Key verification points:
 | File                                                                     | Description                 |
 | ------------------------------------------------------------------------ | --------------------------- |
 | [topology.png](./topology.png)                                           | Network topology            |
-| [tcp-udp-communications.pka](./packet-tracer/tcp-udp-communications.pka) | Packet Tracer activity file |
+| [tcp-udp-communications.pka](./packet-tracer/tcp-and-udp-communications.pka) | Packet Tracer activity file |
 | [screenshots/](./screenshots/)                                           | PDU analysis screenshots    |

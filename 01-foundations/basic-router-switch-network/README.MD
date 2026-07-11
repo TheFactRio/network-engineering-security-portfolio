@@ -155,7 +155,7 @@ This lab helped reinforce the basic workflow for building and verifying a small 
 | File | Description |
 |---|---|
 | [topology.png](./topology.png) | Final network topology |
-| [basic-router-switch-network.pkt](./packet-tracer/Basic-Router-and-Switch-Network.pka) | Completed Packet Tracer lab file |
-| [R1-config.txt](./configs/R1-config.txt) | Final R1 configuration |
-| [S1-config.txt](./configs/S1-config.txt) | Final S1 configuration |
+| [basic-router-switch-network.pkt](./packet-tracer/basic-router-and-switch-network.pka) | Completed Packet Tracer lab file |
+| [R1-config.txt](./configs/r1-config.txt) | Final R1 configuration |
+| [S1-config.txt](./configs/s1-config.txt) | Final S1 configuration |
 | [screenshots/](./screenshots/) | Verification screenshots |

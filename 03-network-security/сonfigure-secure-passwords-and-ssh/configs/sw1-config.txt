@@ -1,0 +1,31 @@
+hostname SW1
+!
+service password-encryption
+!
+enable secret d4ybyd4y
+!
+no ip domain-lookup
+!
+ip domain-name CCNA.com
+!
+username Rossito secret l41talian0
+!
+ip default-gateway 172.16.1.1
+!
+crypto key generate rsa general-keys modulus 1024
+!
+interface Vlan1
+ description Management SVI
+ ip address 172.16.1.2 255.255.255.0
+ no shutdown
+!
+interface range FastEthernet0/2-24, GigabitEthernet0/2
+ description Unused ports
+ shutdown
+!
+line vty 0 15
+ login local
+ transport input ssh
+ exec-timeout 6
+!
+end

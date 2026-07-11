@@ -45,22 +45,23 @@ This section will continue to grow as more labs are added.
 
 ## 📚 Progress
 
-### Completed Foundation Labs
+### Completed Labs
 
 | Lab                                                                                | Category    | Status    |
 | ---------------------------------------------------------------------------------- | ----------- | --------- |
-| [Basic Switch and Router Network](./01-foundations/Basic%20Router%20and%20Switch%20Network/) | Foundations | Completed |
-| [VLSM Design and Implementation](./01-foundations/VLSM%20Design%20and%20Implementation/)     | Foundations | Completed |
-| [IPv6 Addressing](./01-foundations/IPv6%20Addressing/)                               | Foundations | Completed |
-| [TCP and UDP Communications Analysis](./01-foundations/TCP%20and%20UDP%20Communications%20Analysis/)             | Foundations | Completed |
+| [Basic Switch and Router Network](./01-foundations/basic-router-switch-network/) | Foundations | Completed |
+| [VLSM Design and Implementation](./01-foundations/vlsm-design-and-implementation/)     | Foundations | Completed |
+| [IPv6 Addressing](./01-foundations/ipv6-addressing/)                               | Foundations | Completed |
+| [TCP and UDP Communications Analysis](./01-foundations/tcp-udp-communications-analysis/)             | Foundations | Completed |
+| [Secure Passwords and SSH](./03-network-security/сonfigure-secure-passwords-and-ssh/)             | Network Security | Completed |
 
 ### Overall Portfolio Progress
 
 | Category                   | Status                 |
 | -------------------------- | ---------------------- |
-| `01-foundations`           | Completed |
+| `01-foundations`           | Completed              |
 | `02-switching-routing`     | Planned                |
-| `03-network-security`      | Planned                |
+| `03-network-security`      | In progress            |
 | `04-operations-monitoring` | Planned                |
 | `05-troubleshooting`       | Planned                |
 | `06-network-project`       | Planned                |
@@ -69,7 +70,7 @@ This section will continue to grow as more labs are added.
 ## 🎯 Future Plans
 
 * Add switching and routing labs
-* Add network security labs
+* Finish network security labs
 * Add operations and monitoring labs
 * Add troubleshooting-focused labs
 * Build a network project

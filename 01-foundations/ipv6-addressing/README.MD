@@ -88,19 +88,19 @@ The link-local address on S1 was corrected from `fe80::1` to `fe80::b` to avoid 
 
 The command `show ipv6 interface brief` confirmed that both router interfaces were up and had IPv6 addresses configured.
 
-![Router IPv6 Interface Status](./screenshots/Ipv6_interface_brief.png)
+![Router IPv6 Interface Status](./screenshots/ipv6-interface-brief.png)
 
 ### Router IPv6 Interface Details
 
 The command `show ipv6 interface g0/0/0` confirmed that the manually configured link-local address was applied.
 
-![Interface Brief](./screenshots/interface_g000.png)
+![Interface Brief](./screenshots/interface-g000.png)
 
 ### Switch VLAN 1 IPv6 Status
 
 The command `show ipv6 interface vlan1` confirmed that the S1 management interface was active.
 
-![Interface Brief on switch](./screenshots/VLAN_1.png)
+![Interface Brief on switch](./screenshots/VLAN-1.png)
 
 ### PC-B SLAAC Verification
 
@@ -108,7 +108,7 @@ Before IPv6 routing was enabled on R1, PC-B had only a link-local IPv6 address.
 
 After enabling IPv6 unicast routing on R1, PC-B received:
 
-![PC-B ipconfig](./screenshots/PC-B_ipconfig.png)
+![PC-B ipconfig](./screenshots/PC-B-ipconfig.png)
 
 This happened because R1 started sending IPv6 Router Advertisement messages, allowing PC-B to automatically generate an IPv6 address using SLAAC.
 
@@ -124,7 +124,7 @@ This confirms that traffic from PC-A to PC-B is routed through R1.
 
 PC-B successfully pinged PC-A and also successfully pinged the R1 link-local address:
 
-![PC-B tests](./screenshots/PC-B_tests.png)
+![PC-B tests](./screenshots/PC-B-tests.png)
 
 ## 🛠️Troubleshooting Notes
 
@@ -163,7 +163,7 @@ This lab helped reinforce the basic IPv6 configuration workflow on Cisco devices
 | File | Description |
 |---|---|
 | [topology.png](./topology.png) | Final network topology |
-| [ipv6-router-switch-connectivity.pkt](./packet-tracer/ipv6-router-and-switch-connectivity.pka) | Completed Packet Tracer lab file |
-| [R1-config.txt](./configs/R1-config.txt) | Final R1 configuration |
-| [S1-config.txt](./configs/S1-config.txt) | Final S1 configuration |
+| [ipv6-router-switch-connectivity.pka](./packet-tracer/ipv6-router-and-switch-connectivity.pka) | Completed Packet Tracer lab file |
+| [R1-config.txt](./configs/r1-config.txt) | Final R1 configuration |
+| [S1-config.txt](./configs/s1-config.txt) | Final S1 configuration |
 | [screenshots/](./screenshots/) | Verification screenshots |
