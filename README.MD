@@ -53,7 +53,7 @@ This section will continue to grow as more labs are added.
 | [VLSM Design and Implementation](./01-foundations/vlsm-design-and-implementation/)     | Foundations | Completed |
 | [IPv6 Addressing](./01-foundations/ipv6-addressing/)                               | Foundations | Completed |
 | [TCP and UDP Communications Analysis](./01-foundations/tcp-udp-communications-analysis/)             | Foundations | Completed |
-| [Secure Passwords and SSH](./03-network-security/сonfigure-secure-passwords-and-ssh/)             | Network Security | Completed |
+| [Secure Passwords and SSH](./03-network-security/configure-secure-passwords-and-ssh/)             | Network Security | Completed |
 
 ### Overall Portfolio Progress
 
