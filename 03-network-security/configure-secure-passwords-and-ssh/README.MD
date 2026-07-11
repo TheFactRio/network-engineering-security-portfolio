@@ -203,7 +203,7 @@ This lab helped reinforce basic network device hardening concepts:
 | File | Description |
 |---|---|
 | [topology.png](./topology.png) | Network topology |
-| [Configure Secure Passwords and SSH.pka](./packet-tracer/сonfigure-secure-passwords-and-ssh.pka) | Completed Packet Tracer lab file |
+| [Configure Secure Passwords and SSH.pka](./packet-tracer/configure-secure-passwords-and-ssh.pka) | Completed Packet Tracer lab file |
 | [RTA-config.txt](./configs/rta-config.txt) | Final RTA configuration |
 | [SW1-config.txt](./configs/sw1-config.txt) | Final SW1 configuration |
 | [screenshots/](./screenshots/) | Verification and configuration screenshots |

@@ -49,7 +49,7 @@ This section will continue to grow as more labs are added.
 
 | Lab                                                                                | Category    | Status    |
 | ---------------------------------------------------------------------------------- | ----------- | --------- |
-| [Basic Switch and Router Network](./01-foundations/basic-router-switch-network/) | Foundations | Completed |
+| [Basic Router and Switch Network](./01-foundations/basic-router-switch-network/) | Foundations | Completed |
 | [VLSM Design and Implementation](./01-foundations/vlsm-design-and-implementation/)     | Foundations | Completed |
 | [IPv6 Addressing](./01-foundations/ipv6-addressing/)                               | Foundations | Completed |
 | [TCP and UDP Communications Analysis](./01-foundations/tcp-udp-communications-analysis/)             | Foundations | Completed |
