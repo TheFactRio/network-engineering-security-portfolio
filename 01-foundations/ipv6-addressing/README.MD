@@ -116,7 +116,7 @@ This happened because R1 started sending IPv6 Router Advertisement messages, all
 
 PC-A successfully pinged the R1 link-local address and also successfully traced the route to PC-B:
 
-![PC-A tests](./screenshots/PC-A_tests.png)
+![PC-A tests](./screenshots/PC-A-tests.png)
 
 This confirms that traffic from PC-A to PC-B is routed through R1.
 
