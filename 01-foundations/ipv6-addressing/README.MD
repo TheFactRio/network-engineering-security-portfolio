@@ -108,7 +108,7 @@ Before IPv6 routing was enabled on R1, PC-B had only a link-local IPv6 address.
 
 After enabling IPv6 unicast routing on R1, PC-B received:
 
-![PC-B ipconfig](./screenshots/pc-b-ipconfig.png)
+![PC-B ipconfig](./screenshots/pc-b-configs.png)
 
 This happened because R1 started sending IPv6 Router Advertisement messages, allowing PC-B to automatically generate an IPv6 address using SLAAC.
 
