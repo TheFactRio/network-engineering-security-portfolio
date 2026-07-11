@@ -143,7 +143,7 @@ This prevents unauthorized devices from being connected to unused switch ports.
 
 ### Host PC-A
 
-![Configuration Host PC-A](./screenshots/PC-A.png)
+![Configuration Host PC-A](./screenshots/pc-a.png)
 
 ## ✅Verification
 
