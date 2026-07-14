@@ -36,6 +36,9 @@ Current skills demonstrated:
 * IPv6 addressing and connectivity verification
 * Interface configuration and status verification
 * Basic device access security
+* Secure remote management with SSH
+* Local user authentication for device access
+* Login blocking and session timeout configuration
 * End-to-end connectivity testing with ping and tracert
 * IOS verification and troubleshooting commands
 * TCP and UDP traffic analysis
@@ -54,6 +57,7 @@ This section will continue to grow as more labs are added.
 | [IPv6 Addressing](./01-foundations/ipv6-addressing/)                               | Foundations | Completed |
 | [TCP and UDP Communications Analysis](./01-foundations/tcp-udp-communications-analysis/)             | Foundations | Completed |
 | [Secure Passwords and SSH](./03-network-security/configure-secure-passwords-and-ssh/)             | Network Security | Completed |
+| [Secure Network Devices](./03-network-security/secure-network-devices/)             | Network Security | Completed |
 
 ### Overall Portfolio Progress
 

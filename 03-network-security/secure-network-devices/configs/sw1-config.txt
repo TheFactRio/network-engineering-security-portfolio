@@ -1,0 +1,29 @@
+hostname SW-1
+!
+no ip domain-lookup
+!
+service password-encryption
+!
+enable secret @Cons1234!
+!
+username NETadmin secret LogAdmin!9
+!
+ip domain-name security.com
+!
+ip default-gateway 192.168.1.1
+!
+crypto key generate rsa general-keys modulus 1024
+!
+interface Vlan1
+ ip address 192.168.1.254 255.255.255.0
+ no shutdown
+!
+interface range FastEthernet0/1, FastEthernet0/3-9, FastEthernet0/11-24, GigabitEthernet0/2
+ shutdown
+!
+line vty 0 15
+ login local
+ transport input ssh
+ exec-timeout 7 0
+!
+end

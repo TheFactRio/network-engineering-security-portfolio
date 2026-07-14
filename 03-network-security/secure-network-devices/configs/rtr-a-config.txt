@@ -1,0 +1,41 @@
+hostname RTR-A
+!
+no ip domain-lookup
+!
+service password-encryption
+!
+security passwords min-length 10
+!
+enable secret @Cons1234!
+!
+banner motd 'Unauthorized access to this device is prohibited!'
+!
+username NETadmin secret LogAdmin!9
+!
+ip domain-name security.com
+!
+login block-for 45 attempts 3 within 100
+!
+crypto key generate rsa general-keys modulus 1024
+!
+interface GigabitEthernet0/0/0
+ description LAN connection to SW-1
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
+!
+interface GigabitEthernet0/0/1
+ description Remote LAN connection
+ ip address 192.168.2.1 255.255.255.0
+ no shutdown
+!
+line console 0
+ password @Cons1234!
+ login
+ exec-timeout 7 0
+!
+line vty 0 15
+ login local
+ transport input ssh
+ exec-timeout 7 0
+!
+end
