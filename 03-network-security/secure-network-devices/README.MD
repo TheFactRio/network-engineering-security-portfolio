@@ -193,7 +193,7 @@ This lab helped reinforce basic network device hardening concepts:
 | File                                                                     | Description                                |
 | ------------------------------------------------------------------------ | ------------------------------------------ |
 | [topology.png](./topology.png)                                           | Network topology                           |
-| [secure-network-devices.pkt](./packet-tracer/secure-network-devices.pkt) | Completed Packet Tracer network file       |
+| [secure-network-devices.pka](./packet-tracer/secure-network-devices.pka) | Completed Packet Tracer network file       |
 | [rtr-a-config.txt](./configs/rtr-a-config.txt)                           | Final RTR-A configuration                  |
 | [sw-1-config.txt](./configs/sw-1-config.txt)                             | Final SW-1 configuration                   |
 | [screenshots/](./screenshots/)                                           | Verification and configuration screenshots |
