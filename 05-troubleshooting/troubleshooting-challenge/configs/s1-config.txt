@@ -1,0 +1,26 @@
+hostname S1
+!
+service password-encryption
+!
+enable secret Ciscoenpa55
+!
+no ip domain-lookup
+!
+interface Vlan1
+ description Management SVI
+ ip address 172.16.1.61 255.255.255.192
+ no shutdown
+!
+ip default-gateway 172.16.1.62
+!
+line console 0
+ password Ciscoconpa55
+ login
+ exec-timeout 5 0
+!
+line vty 0 15
+ password Ciscoconpa55
+ login
+ exec-timeout 5 0
+!
+end

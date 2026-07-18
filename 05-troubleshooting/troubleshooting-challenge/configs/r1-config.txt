@@ -1,0 +1,60 @@
+hostname R1
+!
+service password-encryption
+security passwords min-length 10
+!
+enable secret Ciscoenpa55
+!
+no ip domain-lookup
+ip domain-name CCNA-lab.com
+!
+ipv6 unicast-routing
+!
+username Admin1 privilege 15 secret Admin1pa55
+!
+login block-for 180 attempts 4 within 120
+!
+interface GigabitEthernet0/0
+ description IT LAN
+ ip address 172.16.1.62 255.255.255.192
+ ipv6 address FE80::1 link-local
+ ipv6 address 2001:DB8:CAFE::1/64
+ no shutdown
+!
+interface GigabitEthernet0/1
+ description Marketing LAN
+ ip address 172.16.1.126 255.255.255.192
+ ipv6 address FE80::1 link-local
+ ipv6 address 2001:DB8:CAFE:1::1/64
+ no shutdown
+!
+interface GigabitEthernet0/2
+ description R&D LAN
+ ip address 172.16.1.254 255.255.255.128
+ ipv6 address FE80::1 link-local
+ ipv6 address 2001:DB8:CAFE:2::1/64
+ no shutdown
+!
+interface Serial0/0/1
+ description Link to Main
+ ip address 10.0.0.2 255.255.255.252
+ ipv6 address FE80::1 link-local
+ ipv6 address 2001:DB8:2::1/64
+ no shutdown
+!
+ip route 0.0.0.0 0.0.0.0 10.0.0.1
+ipv6 route ::/0 2001:DB8:2::2
+!
+banner motd ^CWarning: Unauthorized Access is Prohibited!^C
+!
+line console 0
+ password Ciscoconpa55
+ login
+ exec-timeout 5 0
+!
+line vty 0 15
+ login local
+ transport input ssh
+ exec-timeout 5 0
+!
+end
