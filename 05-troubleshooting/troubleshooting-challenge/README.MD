@@ -175,7 +175,7 @@ R1 interface status was verified with `show ip interface brief`.
 
 R1 IPv6 interface status was checked with `show ipv6 interface brief`.
 
-![R1 IPv6 interface brief](./screenshots/r1-show-ipv6-interface-brief.png)
+![R1 IPv6 interface brief](./screenshots/r1-sh-ipv6-int-br.png)
 
 The R1 configuration was reviewed to identify the VTY access issue.
 
