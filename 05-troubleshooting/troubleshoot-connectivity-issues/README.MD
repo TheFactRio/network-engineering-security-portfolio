@@ -35,6 +35,17 @@ After identifying the issues, configuration changes were applied on PC-A, S1, an
 | S1 | VLAN 1 | `192.168.1.2` | `255.255.255.0` | `192.168.1.1` |
 | PC-A | NIC | `192.168.1.10` | `255.255.255.0` | `192.168.1.1` |
 
+## 🔎Issues Found
+
+| Device | Issue | Fix |
+|---|---|---|
+| PC-A | Missing default gateway | Added `192.168.1.1` |
+| S1 | VLAN 1 was administratively down | Enabled VLAN 1 with `no shutdown` |
+| S1 | Incorrect default gateway | Changed to `192.168.1.1` |
+| S1 | Incorrect speed and duplex on `Fa0/5` | Changed to `duplex full` and `speed 100` |
+| R1 | Incorrect speed and duplex on `G0/0/1` | Changed to `duplex full` and `speed 100` |
+| R1 | Missing default route | Added default route via `10.1.1.2` |
+
 ## ⚙️Configuration Summary
 
 ### PC-A
@@ -49,7 +60,7 @@ The default gateway was corrected to:
 
 ```text
 192.168.1.1
-````
+```
 
 This allowed PC-A to send traffic to remote networks through R1.
 
@@ -262,8 +273,6 @@ This lab helped reinforce basic network device hardening concepts:
 * A default static route is required when a router must forward traffic to unknown external networks.
 
 ## 📁Files
-
-## Files
 
 | File | Description |
 |---|---|

@@ -39,6 +39,17 @@ After a network update, several devices were misconfigured. The task was to iden
 | R&D | NIC | `172.16.1.129/25` | `2001:db8:cafe:2::2/64`, `fe80::2` | `172.16.1.254`, `fe80::1` |
 | Web | NIC | `64.100.0.3/29` | `2001:db8:acad::3/64`, `fe80::2` | `64.100.0.1`, `fe80::1` |
 
+## 🔎Issues Found
+
+| Device | Issue | Fix |
+|---|---|---|
+| IT PC | Incorrect or missing default gateway | Changed default gateway to `172.16.1.62` |
+| S2 | Incorrect subnet mask on VLAN 1 | Changed mask from `255.255.255.224` to `255.255.255.192` |
+| R1 | Incorrect IPv4 address on `G0/1` | Changed address from `192.168.1.126` to `172.16.1.126` |
+| R1 | VTY lines allowed Telnet instead of SSH | Changed VTY access to `transport input ssh` |
+| R1 | SSH local admin account required | Configured `Admin1` with privilege level 15 |
+| R&D PC | IPv6 connectivity was not working correctly | Corrected IPv6 settings according to the addressing table |
+
 ## ⚙️Configuration Summary
 
 ### R1
@@ -262,14 +273,14 @@ line vty 0 15
 A local SSH user was configured:
 
 ```cisco
-username Admin1 secret Admin1pa55
+username Admin1 privilege 15 secret Admin1pa55
 ```
 
 RSA keys were regenerated with a modulus of 1024 bits.
 
 ## 🧠Lessons Learned
 
-This lab helped reinforce basic network device hardening concepts:
+This lab helped reinforce practical network troubleshooting concepts:
 
 * Troubleshooting should start from the end device and move step by step toward the destination.
 * A wrong default gateway on a PC can prevent access to remote networks.
@@ -281,8 +292,6 @@ This lab helped reinforce basic network device hardening concepts:
 * IPv4 and IPv6 should be verified separately during troubleshooting.
 
 ## 📁Files
-
-## Files
 
 | File                                                                           | Description                                  |
 | ------------------------------------------------------------------------------ | -------------------------------------------- |

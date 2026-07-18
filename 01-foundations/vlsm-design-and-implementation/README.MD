@@ -180,7 +180,7 @@ This lab helped reinforce the practical process of VLSM design and implementatio
 | File | Description |
 |---|---|
 | [topology.png](./topology.png) | Network topology |
-| [vlsm-design-and-implementation.pkt](./packet-tracer/vlsm-design-and-implementation.pka) | Completed Packet Tracer lab file |
+| [vlsm-design-and-implementation.pka](./packet-tracer/vlsm-design-and-implementation.pka) | Completed Packet Tracer lab file |
 | [BR1-config.txt](./configs/br1-config.txt) | Final BR1 configuration |
 | [BR2-config.txt](./configs/br2-config.txt) | Final BR2 configuration |
 | [screenshots/](./screenshots/) | Verification screenshots |
