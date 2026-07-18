@@ -79,7 +79,7 @@ This section will continue to grow as more labs are added.
 * Add switching and routing labs
 * Finish network security labs
 * Add operations and monitoring labs
-* Add troubleshooting-focused labs
+* Finish troubleshooting-focused labs
 * Build a network project
 
 ## 📫 Contact
