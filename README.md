@@ -27,8 +27,6 @@ The first set of foundation labs has been completed and documented. I am now con
 
 ## 🛠️ Skills Demonstrated
 
-This section will be updated as more labs are completed.
-
 Current skills demonstrated:
 
 * Basic IOS device configuration
@@ -42,6 +40,8 @@ Current skills demonstrated:
 * End-to-end connectivity testing with ping and tracert
 * IOS verification and troubleshooting commands
 * TCP and UDP traffic analysis
+* Static routing and default route configuration
+* IP addressing and interface troubleshooting
 * Technical documentation
 
 This section will continue to grow as more labs are added.
