@@ -58,6 +58,7 @@ This section will continue to grow as more labs are added.
 | [TCP and UDP Communications Analysis](./01-foundations/tcp-udp-communications-analysis/)             | Foundations | Completed |
 | [Secure Passwords and SSH](./03-network-security/configure-secure-passwords-and-ssh/)             | Network Security | Completed |
 | [Secure Network Devices](./03-network-security/secure-network-devices/)             | Network Security | Completed |
+| [Troubleshoot Connectivity Issues](./05-troubleshooting/troubleshoot-connectivity-issues/)             | Troubleshooting | Completed |
 
 ### Overall Portfolio Progress
 
@@ -67,7 +68,7 @@ This section will continue to grow as more labs are added.
 | `02-switching-routing`     | Planned                |
 | `03-network-security`      | In progress            |
 | `04-operations-monitoring` | Planned                |
-| `05-troubleshooting`       | Planned                |
+| `05-troubleshooting`       | In progress                |
 | `06-network-project`       | Planned                |
 
 
