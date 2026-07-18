@@ -1,0 +1,45 @@
+hostname S1
+!
+no ip domain-lookup
+!
+ip domain-name ccna-lab.com
+!
+username admin01 secret cisco12345
+!
+interface FastEthernet0/1
+ shutdown
+!
+interface FastEthernet0/2
+ shutdown
+!
+interface FastEthernet0/3
+ shutdown
+!
+interface FastEthernet0/4
+ shutdown
+!
+interface FastEthernet0/5
+ duplex full
+ speed 100
+ no shutdown
+!
+interface FastEthernet0/6
+ no shutdown
+!
+interface Vlan1
+ ip address 192.168.1.2 255.255.255.0
+ no shutdown
+!
+ip default-gateway 192.168.1.1
+!
+banner motd ^C Authorized Users Only! ^C
+!
+line vty 0 4
+ login local
+ transport input ssh
+!
+line vty 5 15
+ login local
+ transport input ssh
+!
+end
