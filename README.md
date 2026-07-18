@@ -41,6 +41,7 @@ Current skills demonstrated:
 * IOS verification and troubleshooting commands
 * TCP and UDP traffic analysis
 * Static routing and default route configuration
+* Network troubleshooting methodology
 * IP addressing and interface troubleshooting
 * Technical documentation
 
@@ -59,7 +60,7 @@ This section will continue to grow as more labs are added.
 | [Secure Passwords and SSH](./03-network-security/configure-secure-passwords-and-ssh/)             | Network Security | Completed |
 | [Secure Network Devices](./03-network-security/secure-network-devices/)             | Network Security | Completed |
 | [Troubleshoot Connectivity Issues](./05-troubleshooting/troubleshoot-connectivity-issues/)             | Troubleshooting | Completed |
-| [Troubleshooting Challenge ](./05-troubleshooting/troubleshooting-challenge/)             | Troubleshooting | Completed |
+| [Troubleshooting Challenge](./05-troubleshooting/troubleshooting-challenge/)             | Troubleshooting | Completed |
 
 ### Overall Portfolio Progress
 

@@ -260,7 +260,7 @@ This route tells R1 to forward unknown destination traffic to the ISP router.
 
 ## 🧠Lessons Learned
 
-This lab helped reinforce basic network device hardening concepts:
+This lab helped reinforce practical network troubleshooting concepts:
 
 * Troubleshooting should follow the traffic path step by step.
 * Successful local connectivity does not always mean external connectivity is working.

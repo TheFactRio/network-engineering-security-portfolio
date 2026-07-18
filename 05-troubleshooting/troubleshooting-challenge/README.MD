@@ -63,7 +63,7 @@ G0/0     172.16.1.62/26
 G0/1     172.16.1.126/26
 G0/2     172.16.1.254/25
 S0/0/1   10.0.0.2/30
-````
+```
 
 R1 also includes IPv6 addressing, IPv4 and IPv6 default routes, and SSH access using the local user `Admin1`.
 
