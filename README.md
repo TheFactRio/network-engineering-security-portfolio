@@ -61,13 +61,14 @@ This section will continue to grow as more labs are added.
 | [Secure Network Devices](./03-network-security/secure-network-devices/)             | Network Security | Completed |
 | [Troubleshoot Connectivity Issues](./05-troubleshooting/troubleshoot-connectivity-issues/)             | Troubleshooting | Completed |
 | [Troubleshooting Challenge](./05-troubleshooting/troubleshooting-challenge/)             | Troubleshooting | Completed |
+| [Implement VLANs and Trunking](./02-switching-routing/implement-vlans-and-trunking/)             | Switching-routing | Completed |
 
 ### Overall Portfolio Progress
 
 | Category                   | Status                 |
 | -------------------------- | ---------------------- |
 | `01-foundations`           | Completed              |
-| `02-switching-routing`     | Planned                |
+| `02-switching-routing`     | In progress            |
 | `03-network-security`      | In progress            |
 | `04-operations-monitoring` | Planned                |
 | `05-troubleshooting`       | In progress            |
@@ -76,7 +77,7 @@ This section will continue to grow as more labs are added.
 
 ## 🎯 Future Plans
 
-* Add switching and routing labs
+* Finish switching and routing labs
 * Finish network security labs
 * Add operations and monitoring labs
 * Finish troubleshooting-focused labs

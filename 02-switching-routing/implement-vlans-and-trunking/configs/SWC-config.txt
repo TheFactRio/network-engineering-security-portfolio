@@ -1,0 +1,53 @@
+hostname SWC
+!
+vlan 10
+ name Admin
+!
+vlan 20
+ name Accounts
+!
+vlan 30
+ name HR
+!
+vlan 40
+ name Voice
+!
+vlan 99
+ name Management
+!
+vlan 100
+ name Native
+!
+interface FastEthernet0/1
+ description PC4 - VLAN 10 Admin
+ switchport mode access
+ switchport access vlan 10
+!
+interface FastEthernet0/2
+ description PC5 - VLAN 20 Accounts
+ switchport mode access
+ switchport access vlan 20
+!
+interface FastEthernet0/3
+ description PC6 - VLAN 30 HR
+ switchport mode access
+ switchport access vlan 30
+!
+interface FastEthernet0/4
+ description IP Phone and PC7 - Data VLAN 10, Voice VLAN 40
+ switchport mode access
+ switchport access vlan 10
+ mls qos trust cos
+ switchport voice vlan 40
+!
+interface GigabitEthernet0/2
+ description Dynamic trunk to SWA G0/2
+ switchport mode dynamic auto
+ switchport trunk native vlan 100
+!
+interface Vlan99
+ description Management SVI
+ ip address 192.168.99.254 255.255.255.0
+ no shutdown
+!
+end
