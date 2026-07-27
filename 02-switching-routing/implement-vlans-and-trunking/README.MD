@@ -145,7 +145,7 @@ This was normal because the management VLAN needed to be carried across trunk li
 
 The native VLAN was changed from VLAN 1 to VLAN 100.
 
-The same native VLAN must be configured on both ends of each trunk. If the native VLAN does not match, untagged traffic can be placed into the wrong VLAN and the switch may report a native VLAN mismatch..
+The same native VLAN must be configured on both ends of each trunk. If the native VLAN does not match, untagged traffic can be placed into the wrong VLAN and the switch may report a native VLAN mismatch.
 
 ## 🧠Lessons Learned
 

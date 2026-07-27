@@ -132,7 +132,7 @@ The `show ip interface brief` command on R1 confirms that all router subinterfac
 
 ### Routing Table Verification
 
-The `show ip route` command show connected routes for VLAN 10, VLAN 20, VLAN 30, VLAN 88, and VLAN 99.
+The `show ip route` command shows connected routes for VLAN 10, VLAN 20, VLAN 30, VLAN 88, and VLAN 99.
 
 ![R1 IP Route](./screenshots/r1-show-ip-route.png)
 
