@@ -27,23 +27,17 @@ The first set of foundation labs has been completed and documented. I am now con
 
 ## 🛠️ Skills Demonstrated
 
-Current skills demonstrated:
+Core skills demonstrated:
 
-* Basic IOS device configuration
-* IPv4 addressing, subnetting, and VLSM planning
-* IPv6 addressing and connectivity verification
-* Interface configuration and status verification
-* Basic device access security
-* Secure remote management with SSH
-* Local user authentication for device access
-* Login blocking and session timeout configuration
-* End-to-end connectivity testing with ping and tracert
-* IOS verification and troubleshooting commands
-* TCP and UDP traffic analysis
-* Static routing and default route configuration
-* Network troubleshooting methodology
-* IP addressing and interface troubleshooting
-* Technical documentation
+* Cisco IOS device configuration and verification
+* IPv4 and IPv6 addressing, subnetting, and VLSM design
+* VLAN segmentation, trunking, and inter-VLAN routing
+* Static routing, default gateways, and end-to-end connectivity testing
+* Network device hardening, SSH access, and local authentication
+* Layer 2 switching fundamentals and broadcast domain separation
+* TCP/UDP traffic analysis and common network protocol behavior
+* Network troubleshooting using Cisco IOS verification commands
+* Technical documentation of network topology, configuration, and validation results
 
 This section will continue to grow as more labs are added.
 
