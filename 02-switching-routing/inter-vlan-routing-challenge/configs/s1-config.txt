@@ -1,0 +1,150 @@
+hostname S1
+!
+vlan 10
+ name Faculty/Staff
+!
+vlan 20
+ name Students
+!
+vlan 30
+ name Guest(Default)
+!
+vlan 88
+ name Native
+!
+vlan 99
+ name Management
+!
+interface FastEthernet0/1
+ description Unused port
+ shutdown
+!
+interface FastEthernet0/2
+ description Unused port
+ shutdown
+!
+interface FastEthernet0/3
+ description Unused port
+ shutdown
+!
+interface FastEthernet0/4
+ description Unused port
+ shutdown
+!
+interface FastEthernet0/5
+ description Unused port
+ shutdown
+!
+interface FastEthernet0/6
+ description Guest access port - VLAN 30
+ switchport mode access
+ switchport access vlan 30
+!
+interface FastEthernet0/7
+ description Guest access port - VLAN 30
+ switchport mode access
+ switchport access vlan 30
+!
+interface FastEthernet0/8
+ description Guest access port - VLAN 30
+ switchport mode access
+ switchport access vlan 30
+!
+interface FastEthernet0/9
+ description Guest access port - VLAN 30
+ switchport mode access
+ switchport access vlan 30
+!
+interface FastEthernet0/10
+ description Guest access port - VLAN 30
+ switchport mode access
+ switchport access vlan 30
+!
+interface FastEthernet0/11
+ description Faculty/Staff access port - VLAN 10
+ switchport mode access
+ switchport access vlan 10
+!
+interface FastEthernet0/12
+ description Faculty/Staff access port - VLAN 10
+ switchport mode access
+ switchport access vlan 10
+!
+interface FastEthernet0/13
+ description Faculty/Staff access port - VLAN 10
+ switchport mode access
+ switchport access vlan 10
+!
+interface FastEthernet0/14
+ description Faculty/Staff access port - VLAN 10
+ switchport mode access
+ switchport access vlan 10
+!
+interface FastEthernet0/15
+ description Faculty/Staff access port - VLAN 10
+ switchport mode access
+ switchport access vlan 10
+!
+interface FastEthernet0/16
+ description Faculty/Staff access port - VLAN 10
+ switchport mode access
+ switchport access vlan 10
+!
+interface FastEthernet0/17
+ description Faculty/Staff access port - VLAN 10
+ switchport mode access
+ switchport access vlan 10
+!
+interface FastEthernet0/18
+ description Students access port - VLAN 20
+ switchport mode access
+ switchport access vlan 20
+!
+interface FastEthernet0/19
+ description Students access port - VLAN 20
+ switchport mode access
+ switchport access vlan 20
+!
+interface FastEthernet0/20
+ description Students access port - VLAN 20
+ switchport mode access
+ switchport access vlan 20
+!
+interface FastEthernet0/21
+ description Students access port - VLAN 20
+ switchport mode access
+ switchport access vlan 20
+!
+interface FastEthernet0/22
+ description Students access port - VLAN 20
+ switchport mode access
+ switchport access vlan 20
+!
+interface FastEthernet0/23
+ description Students access port - VLAN 20
+ switchport mode access
+ switchport access vlan 20
+!
+interface FastEthernet0/24
+ description Students access port - VLAN 20
+ switchport mode access
+ switchport access vlan 20
+!
+interface GigabitEthernet0/1
+ description Static trunk to R1 G0/1
+ switchport mode trunk
+ switchport trunk native vlan 88
+ no shutdown
+!
+interface GigabitEthernet0/2
+ description Unused port
+ shutdown
+!
+interface Vlan99
+ description Management SVI
+ ip address 172.17.99.10 255.255.255.0
+ no shutdown
+!
+ip default-gateway 172.17.99.1
+!
+end

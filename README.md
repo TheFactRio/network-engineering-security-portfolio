@@ -62,6 +62,7 @@ This section will continue to grow as more labs are added.
 | [Troubleshoot Connectivity Issues](./05-troubleshooting/troubleshoot-connectivity-issues/)             | Troubleshooting | Completed |
 | [Troubleshooting Challenge](./05-troubleshooting/troubleshooting-challenge/)             | Troubleshooting | Completed |
 | [Implement VLANs and Trunking](./02-switching-routing/implement-vlans-and-trunking/)             | Switching-routing | Completed |
+| [Inter-VLAN Routing Challenge](./02-switching-routing/inter-vlan-routing-challenge/)             | Switching-routing | Completed |
 
 ### Overall Portfolio Progress
 

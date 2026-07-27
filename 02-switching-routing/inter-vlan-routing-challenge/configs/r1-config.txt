@@ -1,0 +1,37 @@
+hostname R1
+!
+interface GigabitEthernet0/0
+ description Link to HQ
+ ip address 172.17.25.2 255.255.255.252
+ no shutdown
+!
+interface GigabitEthernet0/1
+ description Trunk link to S1 G0/1
+ no shutdown
+!
+interface GigabitEthernet0/1.10
+ description Default gateway for VLAN 10 Faculty/Staff
+ encapsulation dot1Q 10
+ ip address 172.17.10.1 255.255.255.0
+!
+interface GigabitEthernet0/1.20
+ description Default gateway for VLAN 20 Students
+ encapsulation dot1Q 20
+ ip address 172.17.20.1 255.255.255.0
+!
+interface GigabitEthernet0/1.30
+ description Default gateway for VLAN 30 Guest
+ encapsulation dot1Q 30
+ ip address 172.17.30.1 255.255.255.0
+!
+interface GigabitEthernet0/1.88
+ description Native VLAN 88
+ encapsulation dot1Q 88 native
+ ip address 172.17.88.1 255.255.255.0
+!
+interface GigabitEthernet0/1.99
+ description Default gateway for VLAN 99 Management
+ encapsulation dot1Q 99
+ ip address 172.17.99.1 255.255.255.0
+!
+end
