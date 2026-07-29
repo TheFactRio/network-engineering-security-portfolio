@@ -34,7 +34,6 @@ Core skills demonstrated:
 * VLAN segmentation, trunking, and inter-VLAN routing
 * Static routing, default gateways, and end-to-end connectivity testing
 * Network device hardening, SSH access, and local authentication
-* Layer 2 switching fundamentals and broadcast domain separation
 * TCP/UDP traffic analysis and common network protocol behavior
 * Network troubleshooting using Cisco IOS verification commands
 * Technical documentation of network topology, configuration, and validation results
