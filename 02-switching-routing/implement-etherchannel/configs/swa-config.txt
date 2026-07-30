@@ -1,0 +1,35 @@
+hostname SWA
+!
+interface GigabitEthernet0/1
+ description EtherChannel member to SWB G0/1 - Port-channel 1
+ switchport mode trunk
+ channel-group 1 mode desirable
+ no shutdown
+!
+interface GigabitEthernet0/2
+ description EtherChannel member to SWB G0/2 - Port-channel 1
+ switchport mode trunk
+ channel-group 1 mode desirable
+ no shutdown
+!
+interface FastEthernet0/21
+ description EtherChannel member to SWC F0/21 - Port-channel 2
+ switchport mode trunk
+ channel-group 2 mode active
+ no shutdown
+!
+interface FastEthernet0/22
+ description EtherChannel member to SWC F0/22 - Port-channel 2
+ switchport mode trunk
+ channel-group 2 mode active
+ no shutdown
+!
+interface Port-channel1
+ description PAgP EtherChannel to SWB
+ switchport mode trunk
+!
+interface Port-channel2
+ description LACP EtherChannel to SWC
+ switchport mode trunk
+!
+end

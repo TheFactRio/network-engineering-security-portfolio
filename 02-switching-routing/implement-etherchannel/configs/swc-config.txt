@@ -1,0 +1,35 @@
+hostname SWC
+!
+interface FastEthernet0/21
+ description EtherChannel member to SWA F0/21 - Port-channel 2
+ switchport mode trunk
+ channel-group 2 mode active
+ no shutdown
+!
+interface FastEthernet0/22
+ description EtherChannel member to SWA F0/22 - Port-channel 2
+ switchport mode trunk
+ channel-group 2 mode active
+ no shutdown
+!
+interface FastEthernet0/23
+ description EtherChannel member to SWB F0/23 - Port-channel 3
+ switchport mode trunk
+ channel-group 3 mode active
+ no shutdown
+!
+interface FastEthernet0/24
+ description EtherChannel member to SWB F0/24 - Port-channel 3
+ switchport mode trunk
+ channel-group 3 mode active
+ no shutdown
+!
+interface Port-channel2
+ description LACP EtherChannel to SWA
+ switchport mode trunk
+!
+interface Port-channel3
+ description LACP EtherChannel to SWB
+ switchport mode trunk
+!
+end
