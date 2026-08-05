@@ -58,6 +58,7 @@ This section will continue to grow as more labs are added.
 | [Inter-VLAN Routing Challenge](./02-switching-routing/inter-vlan-routing-challenge/)             | Switching-routing | Completed |
 | [Implement EtherChannel](./02-switching-routing/implement-etherchannel/)             | Switching-routing | Completed |
 | [HSRP Configuration](./02-switching-routing/hsrp-configuration/)             | Switching-routing | Completed |
+| [Switch Security Configuration](./03-network-security/switch-security-configuration/)             | Network Security | Completed |
 
 ### Overall Portfolio Progress
 
