@@ -59,6 +59,7 @@ This section will continue to grow as more labs are added.
 | [Implement EtherChannel](./02-switching-routing/implement-etherchannel/)             | Switching-routing | Completed |
 | [HSRP Configuration](./02-switching-routing/hsrp-configuration/)             | Switching-routing | Completed |
 | [Switch Security Configuration](./03-network-security/switch-security-configuration/)             | Network Security | Completed |
+| [Configure-WPA2-Enterprise-WLAN](./03-network-security/configure-wpa2-enterprise-wlan/)             | Network Security | Completed |
 
 ### Overall Portfolio Progress
 
