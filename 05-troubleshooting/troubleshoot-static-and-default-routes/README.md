@@ -12,7 +12,6 @@ After the corrections, IPv4 and IPv6 connectivity was restored between PC1, PC2,
 - Troubleshoot IPv4 default routes.
 - Troubleshoot IPv6 static routes.
 - Correct invalid destination networks, prefix lengths, and next-hop addresses.
-- Preserve the existing static route design.
 - Verify full IPv4 and IPv6 connectivity between all three LANs.
 
 ## Topology
@@ -121,7 +120,7 @@ The original R2 table showed reversed IPv4 next hops and an IPv6 route to `2001:
 
 #### R3
 
-The original R3 table contained an incorrect `/28` route and hadn't the IPv4 default route and IPv6 route to LAN 1. All required routes were added in the corrected routing tables.
+The original R3 routing table contained an incorrect `/28` route and lacked an IPv4 default route and an IPv6 route to LAN 1. The corrected routing tables contain all required routes.
 
 ![R3 routes before troubleshooting](./screenshots/r3-routes-before.png)
 
