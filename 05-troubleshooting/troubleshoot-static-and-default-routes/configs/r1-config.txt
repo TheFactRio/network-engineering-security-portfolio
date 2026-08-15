@@ -1,0 +1,58 @@
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R1
+!
+ip cef
+ipv6 unicast-routing
+no ipv6 cef
+!
+license udi pid CISCO1941/K9 sn FTX1524Q0V8
+!
+spanning-tree mode pvst
+!
+interface GigabitEthernet0/0
+ ip address 172.31.1.1 255.255.255.128
+ duplex auto
+ speed auto
+ ipv6 address FE80::1 link-local
+ ipv6 address 2001:DB8:1::1/64
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/0/0
+ ip address 172.31.1.194 255.255.255.252
+ ipv6 address 2001:DB8:2::194/64
+!
+interface Serial0/0/1
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 172.31.1.193
+!
+ip flow-export version 9
+!
+ipv6 route 2001:DB8:4::/64 Serial0/0/0
+ipv6 route 2001:DB8:3::/64 Serial0/0/0
+ipv6 route 2001:DB8:5::/64 Serial0/0/0
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+end
