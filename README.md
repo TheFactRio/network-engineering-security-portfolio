@@ -32,8 +32,10 @@ Core skills demonstrated:
 * Cisco IOS device configuration and verification
 * IPv4 and IPv6 addressing, subnetting, and VLSM design
 * VLAN segmentation, trunking, and inter-VLAN routing
-* Static routing, default gateways, and end-to-end connectivity testing
+* Static and default routing with end-to-end connectivity testing
+* EtherChannel, STP, and HSRP redundancy
 * Network device hardening, SSH access, and local authentication
+* Enterprise wireless configuration with WLC and WPA2-Enterprise
 * TCP/UDP traffic analysis and common network protocol behavior
 * Network troubleshooting using Cisco IOS verification commands
 * Technical documentation of network topology, configuration, and validation results
