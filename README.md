@@ -63,13 +63,14 @@ This section will continue to grow as more labs are added.
 | [Switch Security Configuration](./03-network-security/switch-security-configuration/)             | Network Security | Completed |
 | [Configure-WPA2-Enterprise-WLAN](./03-network-security/configure-wpa2-enterprise-wlan/)             | Network Security | Completed |
 | [Troubleshoot Static and Default Routes](./05-troubleshooting/troubleshoot-static-and-default-routes/)             | Troubleshooting | Completed |
+| [Single-Area OSPFv2 Configuration](./02-switching-routing/single-area-ospfv2-configuration/)             | Switching-routing | Completed |
 
 ### Overall Portfolio Progress
 
 | Category                   | Status                 |
 | -------------------------- | ---------------------- |
 | `01-foundations`           | Completed              |
-| `02-switching-routing`     | In progress            |
+| `02-switching-routing`     | Completed              |
 | `03-network-security`      | In progress            |
 | `04-operations-monitoring` | Planned                |
 | `05-troubleshooting`       | In progress            |
@@ -78,7 +79,6 @@ This section will continue to grow as more labs are added.
 
 ## 🎯 Future Plans
 
-* Finish switching and routing labs
 * Finish network security labs
 * Add operations and monitoring labs
 * Finish troubleshooting-focused labs

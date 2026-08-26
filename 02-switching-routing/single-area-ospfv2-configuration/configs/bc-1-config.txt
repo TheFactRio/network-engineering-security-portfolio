@@ -1,0 +1,94 @@
+!
+version 15.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname BC-1
+!
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0/0
+ ip address 10.0.1.1 255.255.255.248
+ ip ospf priority 255
+ ip ospf 10 area 0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/1/0
+ ip address 10.0.0.14 255.255.255.252
+ ip ospf hello-interval 20
+ ip ospf dead-interval 80
+ ip ospf 10 area 0
+ clock rate 2000000
+!
+interface Serial0/1/1
+ ip address 64.0.100.2 255.255.255.252
+!
+interface Vlan1
+ mac-address 0001.c79d.cb01
+ no ip address
+ shutdown
+!
+router ospf 10
+ router-id 6.6.6.6
+ log-adjacency-changes
+ passive-interface Serial0/1/1
+ auto-cost reference-bandwidth 1000
+ default-information originate
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 Serial0/1/1 
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end

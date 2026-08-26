@@ -1,0 +1,91 @@
+!
+version 15.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname BC-2
+!
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0/0
+ ip address 192.168.4.1 255.255.255.0
+ ip ospf 10 area 0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/1
+ ip address 10.0.1.2 255.255.255.248
+ ip ospf 10 area 0
+ duplex auto
+ speed auto
+!
+interface Serial0/1/0
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Serial0/1/1
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Vlan1
+ mac-address 0001.9708.6301
+ no ip address
+ shutdown
+!
+router ospf 10
+ router-id 5.5.5.5
+ log-adjacency-changes
+ passive-interface GigabitEthernet0/0/0
+ auto-cost reference-bandwidth 1000
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end

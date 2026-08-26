@@ -1,0 +1,101 @@
+!
+version 15.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname P2P-1
+!
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/1/0
+ ip address 10.0.0.1 255.255.255.252
+ clock rate 2000000
+!
+interface Serial0/1/1
+ ip address 10.0.0.9 255.255.255.252
+ ip ospf cost 50
+ clock rate 2000000
+!
+interface Serial0/2/0
+ ip address 10.0.0.13 255.255.255.252
+ ip ospf hello-interval 20
+ ip ospf dead-interval 80
+!
+interface Serial0/2/1
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Vlan1
+ mac-address 000a.f394.2001
+ no ip address
+ shutdown
+!
+router ospf 10
+ log-adjacency-changes
+ auto-cost reference-bandwidth 1000
+ network 10.0.0.0 0.0.0.3 area 0
+ network 10.0.0.8 0.0.0.3 area 0
+ network 10.0.0.12 0.0.0.3 area 0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
