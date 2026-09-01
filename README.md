@@ -64,6 +64,7 @@ This section will continue to grow as more labs are added.
 | [Configure-WPA2-Enterprise-WLAN](./03-network-security/configure-wpa2-enterprise-wlan/)             | Network Security | Completed |
 | [Troubleshoot Static and Default Routes](./05-troubleshooting/troubleshoot-static-and-default-routes/)             | Troubleshooting | Completed |
 | [Single-Area OSPFv2 Configuration](./02-switching-routing/single-area-ospfv2-configuration/)             | Switching-routing | Completed |
+| [IPv4 ACL Implementation Challenge](./03-network-security/ipv4-acl-implementation-challenge/)             | Network Security | Completed |
 
 ### Overall Portfolio Progress
 

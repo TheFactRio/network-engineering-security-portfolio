@@ -1,0 +1,61 @@
+version 15.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Branch
+!
+ip cef
+no ipv6 cef
+!
+spanning-tree mode pvst
+!
+interface GigabitEthernet0/0/0
+ ip address 192.168.2.1 255.255.255.224
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/1
+ ip address 192.168.2.33 255.255.255.240
+ duplex auto
+ speed auto
+!
+interface Serial0/1/0
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Serial0/1/1
+ ip address 192.168.3.2 255.255.255.252
+ ip access-group branch_to_hq out
+!
+interface Vlan1
+ mac-address 00d0.d3da.0d01
+ no ip address
+ shutdown
+!
+router ospf 10
+ log-adjacency-changes
+ passive-interface GigabitEthernet0/0/0
+ passive-interface GigabitEthernet0/0/1
+ network 192.168.3.0 0.0.0.3 area 0
+ network 192.168.2.0 0.0.0.31 area 0
+ network 192.168.2.32 0.0.0.15 area 0
+!
+ip classless
+!
+ip flow-export version 9
+!
+ip access-list extended branch_to_hq
+ deny ip 192.168.2.0 0.0.0.31 192.168.1.0 0.0.0.63
+ deny ip 192.168.2.32 0.0.0.15 192.168.1.0 0.0.0.63
+ permit ip any any
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+end
