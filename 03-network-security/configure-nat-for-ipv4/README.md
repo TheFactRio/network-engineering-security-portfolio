@@ -56,7 +56,7 @@ The assigned public block for NAT was `209.165.202.128/30`.
 
 The named standard ACL `R2NAT` identifies the three inside LANs in the required order:
 
-[R2NAT named ACL](./screenshots/r2nat-acl.png)
+![R2NAT named ACL](./screenshots/r2nat-acl.png)
 
 The ACL is used as a NAT classification rule.
 
