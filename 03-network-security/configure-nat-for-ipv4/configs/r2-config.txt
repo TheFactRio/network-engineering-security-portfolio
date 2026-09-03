@@ -1,0 +1,79 @@
+version 12.3
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R2
+!
+ip cef
+no ipv6 cef
+!
+ip ssh version 1
+!
+spanning-tree mode pvst
+!
+interface FastEthernet0/0
+ ip address 192.168.20.1 255.255.255.0
+ ip nat inside
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/0/0
+ ip address 10.1.1.2 255.255.255.252
+ ip nat inside
+!
+interface Serial0/0/1
+ ip address 10.2.2.1 255.255.255.252
+ ip nat inside
+ clock rate 64000
+!
+interface Serial0/1/0
+ ip address 209.165.200.225 255.255.255.224
+ ip nat outside
+!
+interface Serial0/1/1
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router rip
+ version 2
+ passive-interface Serial0/1/0
+ network 10.0.0.0
+ default-information originate
+ no auto-summary
+!
+ip nat pool R2POOL 209.165.202.129 209.165.202.129 netmask 255.255.255.252
+ip nat inside source list R2NAT pool R2POOL overload
+ip nat inside source static 192.168.20.254 209.165.202.130
+ip classless
+ip route 0.0.0.0 0.0.0.0 Serial0/1/0
+!
+ip flow-export version 9
+!
+ip access-list standard R2NAT
+ permit 192.168.10.0 0.0.0.255
+ permit 192.168.20.0 0.0.0.255
+ permit 192.168.30.0 0.0.0.255
+!
+banner motd ^CAUTHORIZED ACCESS ONLY!^C
+!
+line con 0
+ login
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+end
