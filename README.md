@@ -66,6 +66,7 @@ This section will continue to grow as more labs are added.
 | [Single-Area OSPFv2 Configuration](./02-switching-routing/single-area-ospfv2-configuration/)             | Switching-routing | Completed |
 | [IPv4 ACL Implementation Challenge](./03-network-security/ipv4-acl-implementation-challenge/)             | Network Security | Completed |
 | [Configure NAT for IPv4](./03-network-security/configure-nat-for-ipv4/)             | Network Security | Completed |
+| [Enterprise Network Troubleshooting](./05-troubleshooting/enterprise-network-troubleshooting/)             | Troubleshooting | Completed |
 
 ### Overall Portfolio Progress
 
@@ -75,7 +76,7 @@ This section will continue to grow as more labs are added.
 | `02-switching-routing`     | Completed              |
 | `03-network-security`      | In progress            |
 | `04-operations-monitoring` | Planned                |
-| `05-troubleshooting`       | In progress            |
+| `05-troubleshooting`       | Completed              |
 | `06-network-project`       | Planned                |
 
 
@@ -83,7 +84,6 @@ This section will continue to grow as more labs are added.
 
 * Finish network security labs
 * Add operations and monitoring labs
-* Finish troubleshooting-focused labs
 * Build a network project
 
 ## 📫 Contact
