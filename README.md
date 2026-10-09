@@ -12,7 +12,7 @@ The labs and the project are built in **Cisco Packet Tracer**.
 
 This portfolio is currently in progress.
 
-The first set of foundation labs has been completed and documented. I am now continuing with switching, routing, network security, and troubleshooting labs.
+The foundations, switching-routing, and troubleshooting labs have been completed and documented. I am now continuing with network-security and operations-monitoring labs.
 
 ## 📁 Lab Categories
 
