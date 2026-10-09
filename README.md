@@ -67,6 +67,7 @@ This section will continue to grow as more labs are added.
 | [IPv4 ACL Implementation Challenge](./03-network-security/ipv4-acl-implementation-challenge/)             | Network Security | Completed |
 | [Configure NAT for IPv4](./03-network-security/configure-nat-for-ipv4/)             | Network Security | Completed |
 | [Enterprise Network Troubleshooting](./05-troubleshooting/enterprise-network-troubleshooting/)             | Troubleshooting | Completed |
+| [Secure Routing and Router Management](./03-network-security/router-security-and-management/)             | Network Security | Completed |
 
 ### Overall Portfolio Progress
 
