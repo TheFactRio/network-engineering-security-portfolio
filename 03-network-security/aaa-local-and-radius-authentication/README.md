@@ -227,6 +227,6 @@ OpenSSH was installed. Legacy `diffie-hellman-group14-sha1` and `ssh-rsa` were e
 | [aaa-local-and-radius-authentication.gns3](./gns3/aaa-local-and-radius-authentication.gns3) | GNS3 project file |
 | [r1-config.txt](./configs/r1-config.txt) | Final R1 running configuration |
 | [r2-config.txt](./configs/r2-config.txt) | Final R2 running configuration |
-| `[r3-config.txt](./configs/r3-config.txt) | Final R3 running configuration |
+| [r3-config.txt](./configs/r3-config.txt) | Final R3 running configuration |
 | [configs/ubuntu-freeradius/](./configs/ubuntu-freeradius/) | FreeRADIUS client and user snippets, netplan file |
 | [screenshots/](./screenshots/) | Verification screenshots |
