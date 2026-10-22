@@ -6,7 +6,7 @@ I'm **Mykhailo**, a cybersecurity student from Ukraine.
 
 This portfolio documents my hands-on networking practice while studying CCNA concepts, with a focus on routing, switching, network security and troubleshooting.
 
-The labs and the project are built in **Cisco Packet Tracer**.
+The labs and the project are built in **Cisco Packet Tracer and GNS3**.
 
 ## 💻 Current Status
 
@@ -68,6 +68,7 @@ This section will continue to grow as more labs are added.
 | [Configure NAT for IPv4](./03-network-security/configure-nat-for-ipv4/)             | Network Security | Completed |
 | [Enterprise Network Troubleshooting](./05-troubleshooting/enterprise-network-troubleshooting/)             | Troubleshooting | Completed |
 | [Secure Routing and Router Management](./03-network-security/router-security-and-management/)             | Network Security | Completed |
+| [AAA Local and RADIUS Authentication](./03-network-security/aaa-local-and-radius-authentication/)         | Network Security | Completed |
 
 ### Overall Portfolio Progress
 
